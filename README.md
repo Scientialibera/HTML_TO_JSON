@@ -11,15 +11,24 @@ A robust Python module to convert HTML tables into JSON format. It handles compl
 - Outputs a list of dictionaries (if headers exist) or a list of lists.
 - Command Line Interface (CLI) support.
 
-## Requirements
+## Installation
 
-- Python 3.x
-- beautifulsoup4
+### Option 1: Using pip with pyproject.toml
 
-Install dependencies:
+```bash
+pip install .
+```
+
+### Option 2: Direct pip install
+
 ```bash
 pip install beautifulsoup4
 ```
+
+### Requirements
+
+- Python 3.6 or higher
+- beautifulsoup4
 
 ## Usage
 
