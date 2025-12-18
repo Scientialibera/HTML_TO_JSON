@@ -1,101 +1,110 @@
-# HTML Table to JSON Converter
+# HTML to JSON Table Converter
 
-A robust Python module to convert HTML tables into JSON format. It handles complex table structures including merged cells (rowspan/colspan), nested tables, and jagged rows.
+Convert HTML and PDF tables to JSON format.
 
 ## Features
 
-- Converts HTML tables to JSON.
-- Supports `rowspan` and `colspan` by filling the grid structure.
-- Handles nested tables recursively.
-- Detects headers automatically from `<thead>` or `<th>` elements.
-- Outputs a list of dictionaries (if headers exist) or a list of lists.
-- Command Line Interface (CLI) support.
+- ✅ HTML tables to JSON
+- ✅ PDF table extraction
+- ✅ Merged cells (rowspan/colspan)
+- ✅ Nested tables
+- ✅ Multi-row headers
+- ✅ Multiple tables per file
+- ✅ CLI support
 
 ## Installation
 
-### Option 1: Using pip with pyproject.toml
-
 ```bash
-pip install .
+pip install -e .
 ```
 
-### Option 2: Direct pip install
-
-```bash
-pip install beautifulsoup4
-```
-
-### Requirements
-
-- Python 3.6 or higher
-- beautifulsoup4
-
-## Usage
+## Quick Start
 
 ### Python
 
 ```python
 from html_table_converter import HTMLTableConverter
 
-html_content = """
-<table>
-    <thead>
-        <tr><th>Name</th><th>Age</th></tr>
-    </thead>
-    <tbody>
-        <tr><td>Alice</td><td>30</td></tr>
-    </tbody>
-</table>
-"""
-
 converter = HTMLTableConverter()
-json_output = converter.convert_to_json(html_content)
-print(json_output)
+
+# HTML
+json_output = converter.convert_to_json(html_string)
+
+# PDF
+json_output = converter.convert_pdf_to_json('file.pdf')
 ```
 
 ### Command Line
 
 ```bash
-python html_table_converter.py path/to/file.html
+python html_table_converter.py tables.html
+python html_table_converter.py tables.pdf
 ```
 
-## Example
+## Output
 
-### Input HTML
-
-```html
-<table border="1">
-    <tr>
-        <th rowspan="2">Name</th>
-        <th colspan="2">Contact</th>
-    </tr>
-    <tr>
-        <th>Email</th>
-        <th>Phone</th>
-    </tr>
-    <tr>
-        <td>John Doe</td>
-        <td>john@example.com</td>
-        <td>555-1234</td>
-    </tr>
-</table>
-```
-
-### Output JSON
-
+### With Headers
 ```json
 [
-    [
-        {
-            "Name": "Name",
-            "Contact": "Email",
-            "Contact_1": "Phone"
-        },
-        {
-            "Name": "John Doe",
-            "Contact": "john@example.com",
-            "Contact_1": "555-1234"
-        }
-    ]
+  {"Name": "Alice", "Age": "30", "City": "NYC"},
+  {"Name": "Bob", "Age": "25", "City": "LA"}
 ]
 ```
+
+### Without Headers
+```json
+[
+  ["value1", "value2"],
+  ["value3", "value4"]
+]
+```
+
+### Multi-row Headers
+```json
+[
+  {"Category - Year": "value", "Metric - Type": "value"}
+]
+```
+
+## API
+
+### `convert_to_json(html_content)`
+Convert HTML to JSON. Returns JSON string.
+
+### `convert_pdf_to_json(pdf_path, use_native_json=False)`
+Convert PDF to JSON. Returns JSON string.
+
+## Examples
+
+See `examples/` folder for detailed examples:
+- Basic extraction
+- Metadata analysis  
+- Table validation
+- PDF analysis
+
+Run examples:
+```bash
+cd examples
+python pdf_metadata_examples.py
+python enhanced_converter_metadata.py
+python practical_metadata_validation.py
+```
+
+## Dependencies
+
+- beautifulsoup4
+- pdfplumber
+
+## Supported Tables
+
+- ✅ Simple tables with headers
+- ✅ Tables without headers
+- ✅ Merged cells (rowspan/colspan)
+- ✅ Nested tables
+- ✅ Multi-row headers
+- ✅ Multiple tables in single file
+- ✅ Digital PDF tables
+
+## License
+
+MIT

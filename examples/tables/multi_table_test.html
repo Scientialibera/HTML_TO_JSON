@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Tables Test</title>
+</head>
+<body>
+    <h1>Multiple Tables of Varying Complexity</h1>
+    
+    <!-- TABLE 1: Simple table -->
+    <h2>Table 1: Simple Data</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>30</td>
+                <td>NYC</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>25</td>
+                <td>LA</td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td>35</td>
+                <td>Chicago</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- TABLE 2: Table with merged cells -->
+    <h2>Table 2: Merged Cells</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">Employee</th>
+                <th colspan="2">Q1 Performance</th>
+                <th colspan="2">Q2 Performance</th>
+            </tr>
+            <tr>
+                <th>Sales</th>
+                <th>Rating</th>
+                <th>Sales</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John Smith</td>
+                <td>100000</td>
+                <td>A</td>
+                <td>120000</td>
+                <td>A+</td>
+            </tr>
+            <tr>
+                <td>Jane Doe</td>
+                <td>95000</td>
+                <td>B+</td>
+                <td>110000</td>
+                <td>A</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- TABLE 3: Complex multi-level headers -->
+    <h2>Table 3: Complex Multi-Level Headers</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="3">Product</th>
+                <th colspan="6">Regional Sales (2024)</th>
+            </tr>
+            <tr>
+                <th colspan="2">North America</th>
+                <th colspan="2">Europe</th>
+                <th colspan="2">Asia</th>
+            </tr>
+            <tr>
+                <th>Q1</th>
+                <th>Q2</th>
+                <th>Q1</th>
+                <th>Q2</th>
+                <th>Q1</th>
+                <th>Q2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Product A</td>
+                <td>50000</td>
+                <td>55000</td>
+                <td>40000</td>
+                <td>42000</td>
+                <td>30000</td>
+                <td>35000</td>
+            </tr>
+            <tr>
+                <td>Product B</td>
+                <td>60000</td>
+                <td>65000</td>
+                <td>45000</td>
+                <td>48000</td>
+                <td>35000</td>
+                <td>40000</td>
+            </tr>
+            <tr>
+                <td>Product C</td>
+                <td>40000</td>
+                <td>42000</td>
+                <td>35000</td>
+                <td>38000</td>
+                <td>25000</td>
+                <td>28000</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- TABLE 4: Table without headers -->
+    <h2>Table 4: No Headers</h2>
+    <table border="1">
+        <tbody>
+            <tr>
+                <td>100</td>
+                <td>200</td>
+                <td>300</td>
+            </tr>
+            <tr>
+                <td>400</td>
+                <td>500</td>
+                <td>600</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
