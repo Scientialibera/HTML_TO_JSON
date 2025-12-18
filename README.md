@@ -4,13 +4,13 @@ Convert HTML and PDF tables to JSON format.
 
 ## Features
 
-- ✅ HTML tables to JSON
-- ✅ PDF table extraction
-- ✅ Merged cells (rowspan/colspan)
-- ✅ Nested tables
-- ✅ Multi-row headers
-- ✅ Multiple tables per file
-- ✅ CLI support
+- HTML tables to JSON
+- PDF table extraction
+- Merged cells (rowspan/colspan)
+- Nested tables
+- Multi-row headers
+- Multiple tables per file
+- CLI support
 
 ## Installation
 
@@ -97,13 +97,13 @@ python practical_metadata_validation.py
 
 ## Supported Tables
 
-- ✅ Simple tables with headers
-- ✅ Tables without headers
-- ✅ Merged cells (rowspan/colspan)
-- ✅ Nested tables
-- ✅ Multi-row headers
-- ✅ Multiple tables in single file
-- ✅ Digital PDF tables
+- Simple tables with headers
+- Tables without headers
+- Merged cells (rowspan/colspan)
+- Nested tables
+- Multi-row headers
+- Multiple tables in single file
+- Digital PDF tables
 
 ## License
 

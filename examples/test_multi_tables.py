@@ -88,9 +88,9 @@ print(f"\nHTML tables: {len(html_data)}")
 print(f"PDF tables: {len(pdf_data)}")
 
 if len(html_data) == len(pdf_data):
-    print("✓ Same number of tables in both formats")
+    print("[OK] Same number of tables in both formats")
 else:
-    print(f"✗ Different number of tables: HTML={len(html_data)}, PDF={len(pdf_data)}")
+    print(f"[FAIL] Different number of tables: HTML={len(html_data)}, PDF={len(pdf_data)}")
 
 # Detailed checks
 print("\nDetailed checks:")
